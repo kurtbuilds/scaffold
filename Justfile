@@ -9,3 +9,9 @@ test *ARGS:
 
 build:
     cargo build
+
+install:
+    cargo install --path .
+
+check:
+    cargo check

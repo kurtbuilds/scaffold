@@ -56,6 +56,7 @@ pub fn read_template(template_name: &str, options: &Options) -> Result<Template>
     }
     let mut template = WalkBuilder::new(&template_path)
         .hidden(false)
+        .build()
         .into_iter()
         .filter_map(|e| e.ok())
         .filter(|f| f.file_type().map(|t| t.is_file()).unwrap_or(false))

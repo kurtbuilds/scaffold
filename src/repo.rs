@@ -41,7 +41,10 @@ pub fn save_template(template: &Template, options: &Options) -> Result<()> {
     }
     fs::create_dir_all(&template_path).unwrap();
     for file in template.files.iter() {
-        fs::write(template_path.join(&file.relative_path), &file.contents).unwrap();
+        let file_path = template_path.join(&file.relative_path);
+        let parent = file_path.parent().unwrap();
+        fs::create_dir_all(parent).unwrap();
+        fs::write(file_path, &file.contents).unwrap();
     }
     Ok(())
 }

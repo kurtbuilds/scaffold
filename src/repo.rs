@@ -3,7 +3,7 @@ use std::path::PathBuf;
 use crate::Template;
 use anyhow::{Result, anyhow};
 use expanduser::expanduser;
-use ignore::{Walk};
+use ignore::{Walk, WalkBuilder};
 use crate::template::File;
 
 pub struct Options {
@@ -54,7 +54,8 @@ pub fn read_template(template_name: &str, options: &Options) -> Result<Template>
     if !template_path.exists() {
         return Err(anyhow!("Template does not exist."))
     }
-    let mut template = Walk::new(&template_path)
+    let mut template = WalkBuilder::new(&template_path)
+        .hidden(false)
         .into_iter()
         .filter_map(|e| e.ok())
         .filter(|f| f.file_type().map(|t| t.is_file()).unwrap_or(false))

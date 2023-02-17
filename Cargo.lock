@@ -532,9 +532,9 @@ dependencies = [
 
 [[package]]
 name = "git-config"
-version = "0.15.1"
+version = "0.16.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "500cc0517781f9f573c4dc26feb3ae0cdc28ae7160a81ef104590943984f6a8e"
+checksum = "457aa928d9521ac7514c0c7abb7a890c5274a3eebe8eaa0d40a0b8db0c1fafa9"
 dependencies = [
  "bstr",
  "git-config-value",
@@ -606,9 +606,9 @@ dependencies = [
 
 [[package]]
 name = "git-discover"
-version = "0.12.1"
+version = "0.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a2738a9941f1411cff31e6ea4399a6c7304cc3ea34fb8c1c6f1aef1f667d46cc"
+checksum = "d14f330cca9ba171bb1404cb3b1d6fc6323153b8f72fa9dcf7d95904d66cc234"
 dependencies = [
  "bstr",
  "git-hash",
@@ -812,9 +812,9 @@ dependencies = [
 
 [[package]]
 name = "git-ref"
-version = "0.23.1"
+version = "0.24.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2a2c29bab109acaf626d49a54f1f85ab7f0911268fbf62c2b39680ef4ef19069"
+checksum = "94ca590ebe794709951f696d14e1d4ea98e58363e79f51844f8d1aafc3896b44"
 dependencies = [
  "git-actor",
  "git-features",
@@ -845,9 +845,9 @@ dependencies = [
 
 [[package]]
 name = "git-repository"
-version = "0.33.0"
+version = "0.35.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1a958d3fa83660d15c6535765477a8895156bdd6a922dbd0fc445afa42f4b534"
+checksum = "4ab2628641589b4d20a0b0b64bf6892ab1fc5e431f112afbb277e9f4c3224c8e"
 dependencies = [
  "git-actor",
  "git-attributes",

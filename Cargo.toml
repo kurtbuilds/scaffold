@@ -10,5 +10,5 @@ anyhow = { version = "1.0.68", features = ["backtrace"] }
 clap = { version = "4.1.4", features = ["derive"] }
 clap_complete = "4.1.1"
 expanduser = "1.2.2"
-git-repository = "0.33.0"
+git-repository = "0.35.0"
 ignore = "0.4.20"

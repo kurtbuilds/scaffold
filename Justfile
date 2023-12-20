@@ -11,7 +11,7 @@ build:
     cargo build
 
 install:
-    cargo install --path .
+    cargo install --path . --locked
 
 check:
     cargo check

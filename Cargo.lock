@@ -451,6 +451,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "faster-hex"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a2a2b11eda1d40935b26cf18f6833c526845ae8c41e58d09af6adeb6f0269183"
+
+[[package]]
 name = "fastrand"
 version = "1.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -540,9 +546,9 @@ dependencies = [
 
 [[package]]
 name = "git-attributes"
-version = "0.8.2"
+version = "0.8.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d5ee4927fda9cae8543b8322080e35abb4538a3344991a4af4b4a6016faf9154"
+checksum = "02d10e74ac301dbeef90061c7b43d108e040786570ad58d3b52fb04a2eed5a9a"
 dependencies = [
  "bstr",
  "compact_str",
@@ -583,9 +589,9 @@ dependencies = [
 
 [[package]]
 name = "git-config"
-version = "0.16.1"
+version = "0.16.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "457aa928d9521ac7514c0c7abb7a890c5274a3eebe8eaa0d40a0b8db0c1fafa9"
+checksum = "49aad09d1a81b8481149e4cdb5aee5437de9cf24478d0e4edfa533f412024fb9"
 dependencies = [
  "bstr",
  "git-config-value",
@@ -694,9 +700,9 @@ dependencies = [
 
 [[package]]
 name = "git-glob"
-version = "0.5.3"
+version = "0.5.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "28ca8b1a36027c28ab7dba9f96f63493c2f486f133579bafb08106995646f9a6"
+checksum = "3018b16df92d0ae605bab756b096a828a6f4f76c71bae789eea76652d5a42cec"
 dependencies = [
  "bitflags 1.3.2",
  "bstr",
@@ -1017,9 +1023,9 @@ dependencies = [
 
 [[package]]
 name = "git-worktree"
-version = "0.12.2"
+version = "0.12.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d0091fc5d5abef5c17370c2480972ab154d20c73c5d4d53b7557b1274ea8ef43"
+checksum = "a92459b2194cd0c6982c267bdb06ac9f6872dd58adcfc98bb5488ee0eae458bd"
 dependencies = [
  "bstr",
  "git-attributes",
@@ -1032,6 +1038,58 @@ dependencies = [
  "io-close",
  "thiserror",
 ]
+
+[[package]]
+name = "gix-features"
+version = "0.38.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ac7045ac9fe5f9c727f38799d002a7ed3583cd777e3322a7c4b43e3cf437dc69"
+dependencies = [
+ "gix-hash",
+ "gix-trace",
+ "libc",
+]
+
+[[package]]
+name = "gix-glob"
+version = "0.16.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "74908b4bbc0a0a40852737e5d7889f676f081e340d5451a16e5b4c50d592f111"
+dependencies = [
+ "bitflags 2.6.0",
+ "bstr",
+ "gix-features",
+ "gix-path",
+]
+
+[[package]]
+name = "gix-hash"
+version = "0.14.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f93d7df7366121b5018f947a04d37f034717e113dcf9ccd85c34b58e57a74d5e"
+dependencies = [
+ "faster-hex",
+ "thiserror",
+]
+
+[[package]]
+name = "gix-path"
+version = "0.10.11"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ebfc4febd088abdcbc9f1246896e57e37b7a34f6909840045a1767c6dafac7af"
+dependencies = [
+ "bstr",
+ "gix-trace",
+ "home",
+ "once_cell",
+ "thiserror",
+]
+
+[[package]]
+name = "gix-trace"
+version = "0.1.10"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6cae0e8661c3ff92688ce1c8b8058b3efb312aba9492bbe93661a21705ab431b"
 
 [[package]]
 name = "globset"
@@ -1527,8 +1585,8 @@ dependencies = [
  "clap",
  "clap_complete",
  "expanduser",
- "git-glob",
  "git-repository",
+ "gix-glob",
  "ignore",
 ]
 

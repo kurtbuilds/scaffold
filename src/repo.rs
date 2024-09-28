@@ -28,7 +28,7 @@ pub fn ensure_exists(options: &Options) -> Result<()> {
         return Ok(())
     }
     fs::create_dir_all(&options.template_dir)?;
-    git_repository::init(&options.template_dir)?;
+    gix::init(&options.template_dir)?;
     Ok(())
 }
 
